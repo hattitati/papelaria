@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+.wrapper{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2px;
+    background-color: #ffffff;
+}
+
+.boxlogo{
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.imglogo{
+    width: 65px;
+    height: 50px;
+    background-color: #ffffff;
+    align-items: center;
+}
+
+nav{
+    background-color: #0094b6;
+    width: 100%;
+    height: 15%;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+    padding-left: 25px;
+}
+
+nav ul li a{
+    padding: 5px;
+    text-decoration: none;
+    color: #fff1e1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover{
+    background-color: #c3c5cd;
+    color: #0094b6;
+    transition: all .5s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 10px;
+}
+
+
+/*inicio banner animado*/
+.boxbanner{
+    display: inline-block; /*bloco na mesma linha e podem ser reajustadas*/
+    /*a diferença do display:inline-block e do display:inline é que o primeiro pode ser reajustado*/
+    width: 100%;
+    height: 600px;
+    position: relative; /*usada quando queremos alterar a posição de um elemento tendo como referência a posição inicial dele*/
+    background-color: #ffffff;
+    margin: 2px auto 0px auto; /*todas as medidas num margin*/
+}
+
+.boxbanner img{
+    position: absolute; /*posição absoluta dentro do box banner*/
+    transition-property: opacity; /*propriedade de transparência*/
+    transition-duration: 1s; /*tempo de duração p carregar a imagem*/
+    transition-timing-function: linear; /*transição linear*/
+}
+
+.boxbanner #anime1, .boxbanner:hover #anime2{/*ao passar o mouse carregará a segunda img*/
+ opacity:1; /*a primeira começara 100% invisivel*/}
+
+.boxbanner:hover #anime1, .boxbanner #anime2{
+    opacity: 0;
+}
+ 
+.imgbanner{
+    width: 100%;
+}
+
+.timg{
+    width: 100%;
+    height: 100%;
+}
+
+.boxprod{
+    background-color: #f0f4fb;
+    width: 20%;
+    border-color: #0094b6;
+    border-style: solid;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    color: #071753;
+    font-size: 1.5em;
+}
+
+p{
+    color: #071753;
+    font-size: 1.3em;
+}
+
+.boxfrete{
+ margin-top: 25px;
+ text-align: center;
+}
+
+.imgfrete{
+    width: 100%;
+}
+
+.box1{
+    width: 25%;
+    height: 150px;
+    text-align: left;
+    margin-top: 10px;
+    padding: 0px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0094b6;
+}
+
+li{
+    display: block;
+    text-decoration: none;
+    list-style: none;
+}
+
+li a:visited{
+    text-decoration: none;
+    color: #c3c5cd;
+}
+
+.redes{
+    width: 40px;
+    height: 40px;
+}
+
+.rodape{
+    background-color: #c3c5cd;
+    color: beige;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+/*faleconosco*/
+
+.boxform{
+    background-color: #f0f4fb;
+    width: 40%;
+    border-color: #0094b6;
+    border-style: solid;
+    padding: 10px;
+    margin: 30px;
+    text-align: left;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 150px;
+}
+
+/*Breakpoints - tamanho de tela responsivo*/
+
+@media screen and (min-width: 375px) {
+    .boxprod {
+        width: 80%;
+        height: auto;
+        float: left;
+        margin: 1%;
+        font-size: 1em; /* 1x o elemento que ela está*/
+        padding: 1%;
+    }
+}
+
+/*FONTES RESPONSIVAS
+vw - baseado na largura da tela 
+viewport unit - baseada na largura da tela (width) se tiver 5vw será 5% da largura da tela quanto maior a largura da tela, maior sera meu VW
+em - (1em é uma vez o font-size do elemento*/
+
+@media screen and (min-width: 360px) {
+    .boxprod {
+        width: 80%;
+        height: auto;
+        float: left;
+        margin: 1%;
+        font-size: 1em; /* 1x o elemento que ela está*/
+        padding: 1%;
+    }
+}
+
+
+@media screen and (min-width: 576px) {
+    .boxprod {
+        width: 40%;
+        height: auto;
+        float: left;
+        margin: 1%;
+        font-size: 1em; /* 1x o elemento que ela está*/
+        padding: 1%;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .boxprod {
+        width: 45%;
+        height: auto;
+        float: left;
+        margin: 1%;
+        font-size: 1em; /* 1x o elemento que ela está*/
+        padding: 1%;
+    }
+}
+@media screen and (min-width: 851px) {
+    .boxprod {
+        width: 20%;
+        height: auto;
+        float: left;
+        margin: 1%;
+        font-size: 1em; /* 1x o elemento que ela está*/
+        padding: 1%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .boxprod {
+        width: 20%;
+        height: auto;
+        float: left;
+        margin: 1%;
+        font-size: 1em; /* 1x o elemento que ela está*/
+        padding: 1%;
+    }
+}
